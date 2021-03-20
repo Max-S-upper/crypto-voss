@@ -17,18 +17,17 @@ services:
       - travellist
 
   db:
-    image: mysql:5.7
-    container_name: travellist-db
+    image: mysql:5.7.22
+    container_name: db
     restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
     environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_USER=${DB_USERNAME}
-      - SERVICE_TAGS=dev
-      - SERVICE_NAME=mysql
-    volumes:
-      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
     networks:
       - travellist
 
