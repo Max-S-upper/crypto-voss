@@ -14,13 +14,13 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^8.12",
-        "laravel/nova": "~3.0",
+        "laravel/nova": "*",
         "laravel/tinker": "^2.5"
     },
     "repositories": [
         {
             "type": "composer",
-            "url": "https://nova.laravel.com"
+            "url": "./nova"
         }
     ],
     "require-dev": {
