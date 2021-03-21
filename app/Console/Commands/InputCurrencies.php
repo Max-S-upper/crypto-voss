@@ -28,6 +28,12 @@ class InputCurrencies extends Command
      *
      * @return void
      */
+
+    /**
+     * variable.
+     *
+     * @var CryptoService  $cryptoService
+     */
     public function __construct(CryptoService $cryptoService)
     {
         parent::__construct();
