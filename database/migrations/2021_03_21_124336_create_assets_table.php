@@ -25,13 +25,16 @@ class CreateAssetsTable extends Migration
             $table->double('amount');
             $table->double('exchange');
             $table->text('comment');
-            $table->integer('assets_user_id_foreign');
-            $table->integer('assets_base_currency_id_foreign');
-            $table->integer('assets_quote_currency_id_foreign');
+            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->bigInteger('base_currency_id')->unsigned()->nullable();
+            $table->bigInteger('quote_currency_id')->unsigned()->nullable();
+            $table->timestamps();
+        });
+
+        Schema::table('assets', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('base_currency_id')->references('id')->on('currencies');
             $table->foreign('quote_currency_id')->references('id')->on('currencies');
-            $table->timestamps();
         });
     }
 
