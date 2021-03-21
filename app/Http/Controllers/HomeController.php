@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\Services\CryptoService;
 
 class HomeController extends Controller
 {
+    protected CryptoService $cryptoService;
+
+    public function __construct(CryptoService $cryptoService)
+    {
+        $this->cryptoService = $cryptoService;
+    }
+
     public function index() {
-        $client = new \GuzzleHttp\Client();
-        $btcRateResponse = $client->get(env('COIN_API_BASE_URL') . 'exchangerate/BTC/USDT?apiKey=' . env('COIN_API_KEY'));
-        dd($btcRateResponse);
-//        $btcRate = ;
+        $btcRate = $this->cryptoService->getBtcRate();
 
         return view('welcome', [
-            'btcRate' => $btcRate
+            'btcRate' => $btcRate->rate
         ]);
     }
 }
