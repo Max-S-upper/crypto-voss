@@ -16,7 +16,7 @@ class HomeController extends Controller
     }
 
     public function index() {
-        $btcRate = $this->cryptoService->getBtcRate();
+        $btcRate = $this->cryptoService->getRate('BTC', 'USDT');
 
         return view('welcome', [
             'btcRate' => $btcRate->rate
