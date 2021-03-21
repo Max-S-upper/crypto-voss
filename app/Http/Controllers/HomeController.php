@@ -3,23 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
-use App\Services\CryptoService;
 
 class HomeController extends Controller
 {
-    protected CryptoService $cryptoService;
-
-    public function __construct(CryptoService $cryptoService)
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $this->cryptoService = $cryptoService;
+        $this->middleware('auth');
     }
 
-    public function index() {
-        $btcRate = $this->cryptoService->getRate('BTC', 'USDT');
-
-        return view('welcome', [
-            'btcRate' => $btcRate->rate
-        ]);
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }
