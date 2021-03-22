@@ -21,8 +21,6 @@ class HomeController extends Controller
 //        if ($currencyRate->error) {
 //            $currencyRate = 'Sorry, we don\'t have this currency';
 //        }
-        return view('welcome', [
-            'currencyRate' => 'hello'
-        ]);
+        return view('home');
     }
 }
