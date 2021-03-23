@@ -14,15 +14,8 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^8.12",
-        "laravel/nova": "*",
         "laravel/tinker": "^2.5"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "./nova"
-        }
-    ],
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
