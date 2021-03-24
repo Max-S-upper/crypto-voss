@@ -10963,7 +10963,8 @@ body {
     border-radius: 30px;
 }
 
-.item {
+.item,
+.header {
     display: grid;
     grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 1.3fr 0.1fr;
     grid-template-rows: 7em;
@@ -10973,6 +10974,13 @@ body {
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: #2E2E42;
+    border-radius: 1px;
 }
 
 .item.expanded {
@@ -10987,12 +10995,13 @@ body {
 }
 
 .item.expanded .lower {
-    display: block;
+    display: flex;
 }
 
 .item .burger {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .item .burger > span:first-child {
@@ -11004,21 +11013,24 @@ body {
     font-weight: bold;
 }
 
-.item > div {
+.item > div,
+.header > div.lower {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.item > div.left {
+.item > div.left,
+.header > div.left {
     justify-content: flex-start;
 }
 
-.item > div.right {
+.item > div.right,
+.header > div.right {
     justify-content: flex-end;
 }
 
-.name.upper {
+.item .name.upper {
     grid-column: 2/4;
     font-weight: 600;
 }
@@ -11027,15 +11039,15 @@ body {
     grid-column: 6/7;
 }
 
-.profit.upper {
+.item .profit.upper {
     grid-column: 9/10;
 }
 
-.status.upper {
+.item .status.upper {
     grid-column: 11/12;
 }
 
-.status.upper > div {
+.item .status.upper > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11061,13 +11073,16 @@ body {
 
 .item.expanded .expander.upper > svg {
     transform: rotate(-90deg);
+    filter: invert(192%) sepia(21%) saturate(1166%) hue-rotate(201deg) brightness(62%) contrast(94%);
 }
 
-.item > div.upper {
+.item > div.upper,
+.header > div.upper {
     grid-row: 1/2;
 }
 
-.item > div.lower {
+.item > div.lower,
+.header > div.lower {
     grid-row: 2/3;
 }
 
@@ -11078,6 +11093,10 @@ body {
     top: 761px;
     background: #C4C4C4;
     border-radius: 18px;
+}
+
+.item.expanded .logo > div {
+    border-radius: 30px;
 }
 
 .item .logo svg {
@@ -11101,4 +11120,69 @@ body {
 .item .notice.lower > div > span {
     font-size: 14px;
     line-height: 20px;
+}
+
+.item .current-price.upper {
+    grid-column: 4/6;
+}
+
+.item .cash-profit.upper {
+    grid-column: 6/7;
+}
+
+.item .today-profit.upper {
+    grid-column: 7/9;
+}
+
+.item .profit.upper {
+    grid-column: 9/10;
+}
+
+.item .notice.lower {
+    grid-column: 10/12;
+}
+
+.header {
+    grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 1.3fr 0.2fr;
+    grid-template-rows: 6em 2em;
+    padding: 30px 30px 0 30px;
+}
+
+.header .title {
+    grid-column: 1/4;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 37px;
+}
+
+.header .periods {
+    grid-column: -5/-1;
+}
+
+.header .logo {
+    grid-column: 1/2;
+}
+
+.header .name {
+    grid-column: 2/4;
+}
+
+.header .current-price {
+    grid-column: 4/6;
+}
+
+.header .cash-profit {
+    grid-column: 6/7;
+}
+
+.header .today-profit {
+    grid-column: 7/9;
+}
+
+.header .profit {
+    grid-column: 9/10;
+}
+
+.header .status {
+    grid-column: 11/12;
 }
