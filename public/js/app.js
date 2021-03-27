@@ -49739,6 +49739,6 @@ Vue.compile = compileToFunctions;
 ;
 
 
-document.querySelectorAll('.item .expander > svg').forEach(expander => expander.addEventListener('click', event => {
+document.querySelectorAll('.item .expander > div').forEach(expander => expander.addEventListener('click', event => {
     console.log(event.currentTarget.parentElement.parentElement.classList.toggle('expanded'));
 }));
