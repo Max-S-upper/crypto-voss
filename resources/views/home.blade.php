@@ -83,7 +83,7 @@
                         <span>14.49$</span>
                     </div>
                 </div>
-                <div class="expander upper">
+                <div class="expander upper container">
                     <div class="btn green">
                         <img src="{{ asset('img/eye.svg') }}" alt="See more">
                         <img src="{{ asset('img/invisible.svg') }}" alt="See more">
@@ -107,16 +107,16 @@
                         <span>0.0019</span>
                     </div>
                 </div>
-                <div class="entry-price lower">
-                    <div class="burger">
-                        <span>Investment</span>
-                        <span>14.90$</span>
-                    </div>
-                </div>
                 <div class="goal lower">
                     <div class="burger">
                         <span>Goal</span>
                         <span>0.0548</span>
+                    </div>
+                </div>
+                <div class="entry-price lower">
+                    <div class="burger">
+                        <span>Investment</span>
+                        <span>14.90$</span>
                     </div>
                 </div>
                 <div class="transaction-volume lower">
@@ -142,11 +142,11 @@
                     </div>
                 </div>
                 <div class="management lower">
-                    <div class="btn orange">
-                        <img src="{{ asset('img/eye.svg') }}" alt="See more">
+                    <div class="btn edit orange">
+                        <img src="{{ asset('img/edit.svg') }}" alt="See more">
                     </div>
-                    <div class="btn red">
-                        <img src="{{ asset('img/eye.svg') }}" alt="See more">
+                    <div class="btn delete red">
+                        <img src="{{ asset('img/delete.svg') }}" alt="See more">
                     </div>
                 </div>
             </div>
@@ -168,29 +168,46 @@
                     </svg>
                 </div>
                 <div class="name upper">
-                    <p>XVS/USDT</p>
-                </div>
-                <div class="current-price upper">
-                    <p>14.49$</p>
-                </div>
-                <div class="cash-profit upper">
-                    <p>+25$</p>
-                </div>
-                <div class="today-profit upper">
-                    <p>+5.3%</p>
-                </div>
-                <div class="profit upper">
-                    <p>+2.7%</p>
-                </div>
-                <div class="status upper">
-                    <div class="button1">
-                        <p>Долгосрок</p>
+                    <div class="not-burger">
+                        <span>Currency name</span>
+                        <span>XVS/USDT</span>
                     </div>
                 </div>
-                <div class="expander upper right">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.00049 18L15.0005 12L9.00049 6" fill="#D3D6E4"/>
-                    </svg>
+                <div class="entry-currency-current-price upper">
+                    <div class="not-burger">
+                        <span>Currency price</span>
+                        <span>0.0018</span>
+                    </div>
+                </div>
+                <div class="cash-profit upper">
+                    <div class="not-burger">
+                        <span>Cash profit</span>
+                        <span>+25$</span>
+                    </div>
+                </div>
+                <div class="today-profit upper">
+                    <div class="not-burger">
+                        <span>Today profit</span>
+                        <span>+5.3%</span>
+                    </div>
+                </div>
+                <div class="profit upper">
+                    <div class="not-burger">
+                        <span>Profit</span>
+                        <span>+2.7%</span>
+                    </div>
+                </div>
+                <div class="current-price upper">
+                    <div class="not-burger">
+                        <span>Today profit</span>
+                        <span>14.49$</span>
+                    </div>
+                </div>
+                <div class="expander upper container">
+                    <div class="btn green">
+                        <img src="{{ asset('img/eye.svg') }}" alt="See more">
+                        <img src="{{ asset('img/invisible.svg') }}" alt="See more">
+                    </div>
                 </div>
                 <div class="date lower">
                     <div class="burger">
@@ -210,22 +227,16 @@
                         <span>0.0019</span>
                     </div>
                 </div>
-                <div class="entry-currency-current-price lower">
+                <div class="goal lower">
                     <div class="burger">
-                        <span>Current price</span>
-                        <span>0.0018</span>
+                        <span>Goal</span>
+                        <span>0.0548</span>
                     </div>
                 </div>
                 <div class="entry-price lower">
                     <div class="burger">
                         <span>Investment</span>
                         <span>14.90$</span>
-                    </div>
-                </div>
-                <div class="goal lower">
-                    <div class="burger">
-                        <span>Goal</span>
-                        <span>0.0548</span>
                     </div>
                 </div>
                 <div class="transaction-volume lower">
@@ -250,6 +261,14 @@
                         <span>Lorem ipsum dolor sit amet, consectetur</span>
                     </div>
                 </div>
+                <div class="management lower">
+                    <div class="btn edit orange">
+                        <img src="{{ asset('img/edit.svg') }}" alt="See more">
+                    </div>
+                    <div class="btn delete red">
+                        <img src="{{ asset('img/delete.svg') }}" alt="See more">
+                    </div>
+                </div>
             </div>
             <div class="line"></div>
             <div class="item">
@@ -269,29 +288,46 @@
                     </svg>
                 </div>
                 <div class="name upper">
-                    <p>XVS/USDT</p>
-                </div>
-                <div class="current-price upper">
-                    <p>14.49$</p>
-                </div>
-                <div class="cash-profit upper">
-                    <p>+25$</p>
-                </div>
-                <div class="today-profit upper">
-                    <p>+5.3%</p>
-                </div>
-                <div class="profit upper">
-                    <p>+2.7%</p>
-                </div>
-                <div class="status upper">
-                    <div class="button1">
-                        <p>Долгосрок</p>
+                    <div class="not-burger">
+                        <span>Currency name</span>
+                        <span>XVS/USDT</span>
                     </div>
                 </div>
-                <div class="expander upper right">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.00049 18L15.0005 12L9.00049 6" fill="#D3D6E4"/>
-                    </svg>
+                <div class="entry-currency-current-price upper">
+                    <div class="not-burger">
+                        <span>Currency price</span>
+                        <span>0.0018</span>
+                    </div>
+                </div>
+                <div class="cash-profit upper">
+                    <div class="not-burger">
+                        <span>Cash profit</span>
+                        <span>+25$</span>
+                    </div>
+                </div>
+                <div class="today-profit upper">
+                    <div class="not-burger">
+                        <span>Today profit</span>
+                        <span>+5.3%</span>
+                    </div>
+                </div>
+                <div class="profit upper">
+                    <div class="not-burger">
+                        <span>Profit</span>
+                        <span>+2.7%</span>
+                    </div>
+                </div>
+                <div class="current-price upper">
+                    <div class="not-burger">
+                        <span>Today profit</span>
+                        <span>14.49$</span>
+                    </div>
+                </div>
+                <div class="expander upper container">
+                    <div class="btn green">
+                        <img src="{{ asset('img/eye.svg') }}" alt="See more">
+                        <img src="{{ asset('img/invisible.svg') }}" alt="See more">
+                    </div>
                 </div>
                 <div class="date lower">
                     <div class="burger">
@@ -311,22 +347,16 @@
                         <span>0.0019</span>
                     </div>
                 </div>
-                <div class="entry-currency-current-price lower">
+                <div class="goal lower">
                     <div class="burger">
-                        <span>Current price</span>
-                        <span>0.0018</span>
+                        <span>Goal</span>
+                        <span>0.0548</span>
                     </div>
                 </div>
                 <div class="entry-price lower">
                     <div class="burger">
                         <span>Investment</span>
                         <span>14.90$</span>
-                    </div>
-                </div>
-                <div class="goal lower">
-                    <div class="burger">
-                        <span>Goal</span>
-                        <span>0.0548</span>
                     </div>
                 </div>
                 <div class="transaction-volume lower">
@@ -349,6 +379,14 @@
                             <path d="M12 8C12.5523 8 13 7.55228 13 7C13 6.44771 12.5523 6 12 6C11.4477 6 11 6.44771 11 7C11 7.55228 11.4477 8 12 8Z" fill="white"/>
                         </svg>
                         <span>Lorem ipsum dolor sit amet, consectetur</span>
+                    </div>
+                </div>
+                <div class="management lower">
+                    <div class="btn edit orange">
+                        <img src="{{ asset('img/edit.svg') }}" alt="See more">
+                    </div>
+                    <div class="btn delete red">
+                        <img src="{{ asset('img/delete.svg') }}" alt="See more">
                     </div>
                 </div>
             </div>

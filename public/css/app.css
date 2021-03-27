@@ -10969,18 +10969,21 @@ body {
     display: flex;
 }
 
-.item .burger {
+.item .burger,
+.item .not-burger {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.item .burger > span:first-child {
+.item .burger > span:first-child,
+.item .not-burger > span:first-child {
     font-size: 12px;
     line-height: 22px;
 }
 
-.item .burger > span:last-child {
+.item .burger > span:last-child,
+.item .not-burger > span:last-child {
     font-weight: bold;
 }
 
@@ -11027,6 +11030,7 @@ body {
     border-radius: 18px;
     font-weight: bold;
     color: #212130;
+    transition: .13s ease-in-out;
 }
 
 .btn.green {
@@ -11131,6 +11135,7 @@ body {
 .item .management.lower {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .item .current-price.upper {
@@ -11201,10 +11206,204 @@ body {
     grid-column: 10/12;
 }
 
-.item .expander.upper img {
+.item .expander.upper img,
+.item .management .edit img {
     width: 28px;
 }
 
-@media (min-width: 1200px) {
+.item .management .delete img {
+    width: 18px;
+}
 
+@media (max-width: 1200px) {
+    .item {
+        grid-template-rows: 5em;
+    }
+
+    .header,
+    .item {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .item.expanded {
+        grid-template-rows: 5em 5em 5em 5em 5em 5em;
+    }
+
+    .item .name.upper,
+    .header > div.name.lower,
+    .header > div.cash-profit,
+    .header > div.today-profit,
+    .header > div.cost.lower {
+        display: none;
+    }
+
+    .entry-currency-current-price.upper,
+    .header .current-price {
+        grid-column: 2/3;
+    }
+
+    .header .profit,
+    .item .profit.upper {
+        grid-column: 3/4;
+    }
+
+    .item .expander.upper {
+        grid-column: 4/5;
+    }
+
+    .item .date.lower,
+    .item .cash-profit.upper,
+    .item .today-profit.upper,
+    .item .current-price.upper {
+        display: none;
+        grid-row: 3/4;
+    }
+
+    .item.expanded .cash-profit.upper,
+    .item.expanded .today-profit.upper,
+    .item.expanded .current-price.upper {
+        display: flex;
+    }
+
+    .item .cash-profit.upper > .not-burger > span:first-child,
+    .item .today-profit.upper > .not-burger > span:first-child,
+    .item .current-price.upper > .not-burger > span:first-child {
+        display: block;
+    }
+
+    .item .cash-profit.upper,
+    .item .entry-currency-yesterday-price.lower {
+        grid-column: 2/3;
+    }
+
+    .item .today-profit.upper,
+    .item .goal.lower {
+        grid-column: 3/4;
+    }
+
+    .item .current-price.upper,
+    .item .entry-price.lower {
+        grid-column: 4/5;
+    }
+
+    .item .entry-currency-price.lower,
+    .item .entry-currency-yesterday-price.lower,
+    .item .goal.lower,
+    .item .entry-price.lower {
+        grid-row: 2/3;
+    }
+
+    .item .entry-currency-price.lower {
+        grid-column: 1/2;
+    }
+
+    .item .transaction-volume.lower,
+    .item .exchange.lower {
+        grid-row: 4/5;
+    }
+
+    .item .transaction-volume.lower {
+        grid-column: 1/3;
+    }
+
+    .item .exchange.lower {
+        grid-column: 3/5;
+    }
+
+    .item .notice.lower {
+        grid-row: 5/6;
+        grid-column: 1/-1;
+    }
+
+    .item .management.lower {
+        flex-direction: row;
+        grid-row: 6/7;
+        grid-column: 1/-1;
+    }
+}
+
+@media (max-width: 500px) {
+    .item,
+    .header {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .item {
+        grid-template-rows: 6em;
+        padding: 14px 9px;
+    }
+
+    .item.expanded {
+        grid-template-rows: repeat(7, 6em);
+    }
+
+    .header {
+        padding: 30px 9px 0 9px;
+    }
+
+    .header .title {
+        grid-column: 1/-1;
+        margin-left: 19px;
+    }
+
+    .item .logo.upper,
+    .header .logo.lower {
+        grid-column: 1/4;
+    }
+
+    .item .entry-currency-current-price.upper,
+    .header .current-price.lower {
+        grid-column: 4/7;
+    }
+
+    .item .profit.upper,
+    .header .profit.lower {
+        grid-column: 7/10;
+    }
+
+    .item .expander.upper.container {
+        grid-column: 10/13;
+    }
+
+    .item .entry-currency-price.lower,
+    .item .date.lower,
+    .item .cash-profit.upper {
+        grid-column: 1/5;
+    }
+
+    .item .entry-currency-yesterday-price.lower,
+    .item .transaction-volume.lower,
+    .item .today-profit.upper {
+        grid-column: 5/9;
+    }
+
+    .item .goal.lower,
+    .item .entry-price.lower,
+    .item .current-price.upper {
+        grid-column: 9/13;
+    }
+
+    .item .entry-price.lower,
+    .item .transaction-volume.lower {
+        grid-row: 3/4;
+    }
+
+    .item .cash-profit.upper,
+    .item .today-profit.upper,
+    .item .current-price.upper {
+        grid-row: 4/5;
+    }
+
+    .item .exchange.lower {
+        grid-row: 5/6;
+        grid-column: 1/-1;
+    }
+
+    .item .notice.lower {
+        grid-row: 6/7;
+    }
+
+    .item .management.lower {
+        grid-row: 7/8;
+    }
 }
